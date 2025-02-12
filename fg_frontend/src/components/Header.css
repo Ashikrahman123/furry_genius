@@ -1,0 +1,135 @@
+/* Header */
+.header {
+    background-color: #2c3e50; /* Dark Blue */
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Mobile Menu Button */
+  .menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-btn i {
+    font-size: 20px;
+    color: #fff;
+  }
+  
+  /* Logo */
+  .header-logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Search Bar */
+  .header-search {
+    flex: 1;
+    max-width: 400px;
+  }
+  
+  .header-search input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Icons */
+  .header-icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .header-icons a, .header-icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header-icons i {
+    font-size: 25px;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .header-icons a:hover i {
+    color: #ff6f61; /* Hover color */
+  }
+  
+  /* Navigation Menu (Mobile) */
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #2c3e50;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .header-nav.open {
+    display: flex;
+  }
+  
+  .header-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-nav a:hover {
+    background-color: #34495e;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .menu-btn {
+      display: block;
+    }
+  
+    .header-search {
+      display: none;
+    }
+  
+    .header-search.open {
+      display: block;
+    }
+  
+    .header-icons {
+      gap: 10px;
+    }
+  
+    .header-nav {
+      display: none;
+    }
+  
+    .header-nav.open {
+      display: flex;
+    }
+  }
+  
